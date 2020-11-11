@@ -1,7 +1,7 @@
 #ifndef ACPPTESTONE_H
 #define ACPPTESTONE_H
 
-#include <QWidget>
+#include <QWidget> // 中文
 
 namespace Ui {
 class aCPPtestone;

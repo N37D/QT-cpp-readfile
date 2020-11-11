@@ -1,0 +1,26 @@
+#include "acpptestone.h"
+#include "ui_acpptestone.h"
+#include<QFile>
+
+aCPPtestone::aCPPtestone(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::aCPPtestone)
+{
+    ui->setupUi(this);
+}
+
+aCPPtestone::~aCPPtestone()
+{
+    delete ui;
+}
+
+
+
+void aCPPtestone::on_pushone_clicked()
+{
+    QFile file("D:\Qt5.txt");
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    QByteArray t = file.readAll();
+    ui->text_r->setText(QString(t));
+    file.close();
+}
